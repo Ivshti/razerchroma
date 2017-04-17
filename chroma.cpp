@@ -451,6 +451,8 @@ DWORD WINAPI Thread_AnimateActiveKeysOnKeyboard(LPVOID lpParameter)
         case VK_DOWN: Effect.Key[HIBYTE(RZKEY_DOWN)][LOBYTE(RZKEY_DOWN)] = Color; break;
         case VK_LEFT: Effect.Key[HIBYTE(RZKEY_LEFT)][LOBYTE(RZKEY_LEFT)] = Color; break;
         case VK_RIGHT: Effect.Key[HIBYTE(RZKEY_RIGHT)][LOBYTE(RZKEY_RIGHT)] = Color; break;
+        case VK_OEM_MINUS: Effect.Key[HIBYTE(RZKEY_OEM_2)][LOBYTE(RZKEY_OEM_2)] = Color; break;
+        case VK_OEM_PLUS: Effect.Key[HIBYTE(RZKEY_OEM_3)][LOBYTE(RZKEY_OEM_3)] = Color; break;
         }
     }
 
@@ -729,6 +731,8 @@ void CChromaSDKImpl::ShowKeys(UINT DeviceType, UINT NumKeys, UINT VKey[], COLORR
                     case VK_DOWN: Effect.Key[HIBYTE(RZKEY_DOWN)][LOBYTE(RZKEY_DOWN)] = Color; break;
                     case VK_LEFT: Effect.Key[HIBYTE(RZKEY_LEFT)][LOBYTE(RZKEY_LEFT)] = Color; break;
                     case VK_RIGHT: Effect.Key[HIBYTE(RZKEY_RIGHT)][LOBYTE(RZKEY_RIGHT)] = Color; break;
+                    case VK_OEM_MINUS: Effect.Key[HIBYTE(RZKEY_OEM_2)][LOBYTE(RZKEY_OEM_2)] = Color; break;
+                    case VK_OEM_PLUS: Effect.Key[HIBYTE(RZKEY_OEM_3)][LOBYTE(RZKEY_OEM_3)] = Color; break;
                     }
                 }
 
