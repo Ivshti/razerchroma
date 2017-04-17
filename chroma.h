@@ -5,10 +5,7 @@
 #pragma once
 
 #include <windows.h>
-
-// TEMP; TODO: fix
-#define ASSERT(f) 
-
+#include <assert.h> // for assert
 
 #include "RzChromaSDKDefines.h"
 #include "RzChromaSDKTypes.h"

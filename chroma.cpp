@@ -383,7 +383,7 @@ BOOL CChromaSDKImpl::Initialize()
         m_ChromaSDKModule = LoadLibrary(CHROMASDKDLL);
         if(m_ChromaSDKModule == NULL)
         {
-            ASSERT(GetLastError() == ERROR_SUCCESS);
+            assert(GetLastError() == ERROR_SUCCESS);
             return FALSE;
         }
     }
@@ -439,7 +439,7 @@ BOOL CChromaSDKImpl::UnInitialize()
         if(UnInit)
         {
             Result = UnInit();
-            ASSERT(Result == RZRESULT_SUCCESS);
+            assert(Result == RZRESULT_SUCCESS);
         }
 
         FreeLibrary(m_ChromaSDKModule);
@@ -534,7 +534,7 @@ void CChromaSDKImpl::ShowKeys(UINT DeviceType, UINT NumKeys, UINT VKey[], COLORR
 
             //Result = CreateKeyboardEffect(ChromaSDK::Keyboard::CHROMA_CUSTOM_KEY, &Effect, NULL);
 
-            //ASSERT(Result == RZRESULT_SUCCESS);
+            //assert(Result == RZRESULT_SUCCESS);
 
             ActiveKeysData.numKeys = NumKeys;
 
@@ -626,7 +626,7 @@ void CChromaSDKImpl::ShowKeys(UINT DeviceType, UINT NumKeys, UINT VKey[], COLORR
 
             Result = CreateKeypadEffect(ChromaSDK::Keypad::CHROMA_CUSTOM, &Effect, NULL);
 
-            ASSERT(Result == RZRESULT_SUCCESS);
+            assert(Result == RZRESULT_SUCCESS);
         }
         break;
     }
@@ -804,7 +804,7 @@ void CChromaSDKImpl::ShowColor(UINT DeviceType, COLORREF Color)
 
             RZRESULT Result = CreateKeyboardEffect(ChromaSDK::Keyboard::CHROMA_CUSTOM, &Effect, NULL);
 
-            ASSERT(Result == RZRESULT_SUCCESS);
+            assert(Result == RZRESULT_SUCCESS);
         }
         break;
     case 4:
@@ -815,7 +815,7 @@ void CChromaSDKImpl::ShowColor(UINT DeviceType, COLORREF Color)
 
             RZRESULT Result = CreateHeadsetEffect(ChromaSDK::Headset::CHROMA_STATIC, &Effect, NULL);
 
-            ASSERT(Result == RZRESULT_SUCCESS);
+            assert(Result == RZRESULT_SUCCESS);
         }
         break;
     case 5:
@@ -833,7 +833,7 @@ void CChromaSDKImpl::ShowColor(UINT DeviceType, COLORREF Color)
 
             RZRESULT Result = CreateKeypadEffect(ChromaSDK::Keypad::CHROMA_CUSTOM, &Effect, NULL);
 
-            ASSERT(Result == RZRESULT_SUCCESS);
+            assert(Result == RZRESULT_SUCCESS);
         }
         break;
     }
@@ -915,7 +915,7 @@ BOOL CChromaSDKImpl::IsDeviceConnected(RZDEVICEID DeviceId)
         ChromaSDK::DEVICE_INFO_TYPE DeviceInfo = {};
         RZRESULT Result = QueryDevice(DeviceId, DeviceInfo);
 
-        ASSERT(Result == RZRESULT_SUCCESS);
+        assert(Result == RZRESULT_SUCCESS);
 
         return DeviceInfo.Connected;
     }
