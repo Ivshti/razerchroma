@@ -11,3 +11,6 @@ win32 {
 }
 ```
 
+## Examples of usage
+
+https://github.com/ChromaSDK/quickstart-sample/blob/master/Chroma%20Quickstart%20Example/Template.cpp
