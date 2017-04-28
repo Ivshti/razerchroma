@@ -41,6 +41,7 @@ public:
 
     void PlayLoadingAnimation(UINT DeviceType);
     void ShowKeys(UINT DeviceType, UINT NumKeys, UINT VKey[], COLORREF Color, BOOL Animate=FALSE);
+    void ShowKeysWithCustomCol(UINT DeviceType, UINT NumKeys, UINT VKey[], COLORREF Colors[], BOOL Animate=FALSE);
     void ShowLevel(UINT DeviceType, UINT Hp, UINT Ammo);
     void ShowAlert(UINT DeviceType, COLORREF Color);
     void ShowGauge(UINT DeviceType, UINT Level);
